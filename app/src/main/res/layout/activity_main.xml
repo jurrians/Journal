@@ -15,10 +15,12 @@
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="20dp"
         android:clickable="true"
+        android:onClick="onFloatClick"
         app:backgroundTint="@android:color/darker_gray"
         app:srcCompat="@drawable/icon_plus" />
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="vertical">
