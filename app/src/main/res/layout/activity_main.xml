@@ -7,6 +7,15 @@
     android:theme="@style/Theme.AppTheme.Light.NoActionBar"
     tools:context=".MainActivity">
 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:longClickable="false">
+
+    </ListView>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton3"
         android:layout_width="match_parent"
@@ -18,13 +27,5 @@
         android:onClick="onFloatClick"
         app:backgroundTint="@android:color/darker_gray"
         app:srcCompat="@drawable/icon_plus" />
-
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical">
-
-    </ListView>
 
 </android.support.design.widget.CoordinatorLayout>

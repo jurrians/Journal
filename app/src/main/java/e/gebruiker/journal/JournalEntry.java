@@ -1,33 +1,22 @@
 package e.gebruiker.journal;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.widget.ImageView;
 
 import java.io.Serializable;
 
 public class JournalEntry implements Serializable {
 
-    private int id;
+    private int _id;
     private String title;
     private String content;
     private String mood;
     private String timeStamp;
     private boolean favorite;
 
-    private static EntryDatabase instance;
-
-    public static EntryDatabase getInstance(Context context) {
-        switch instance.
-
-
-        return instance;
-
-
-
-    };
-
-
-
-    private JournalEntry(String title, String content, String mood) {
+    public JournalEntry(String title, String content, String mood) {
 //        this.id = id;
         this.title = title;
         this.content = content;
@@ -37,7 +26,7 @@ public class JournalEntry implements Serializable {
     }
 
     public int getId() {
-        return id;
+        return _id;
     }
 
     public String getTitle() {
@@ -55,5 +44,8 @@ public class JournalEntry implements Serializable {
     public String getTimeStamp() {
         return timeStamp;
     }
+
+
+
 
 }
