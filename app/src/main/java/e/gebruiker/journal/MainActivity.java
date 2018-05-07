@@ -31,11 +31,39 @@ public class MainActivity extends AppCompatActivity {
         adapter = new EntryAdapter(this, cursor);
         listView.setAdapter(adapter);
 
-        ListItemClickListener listItemClickListener = new ListItemClickListener();
-        listView.setOnItemClickListener(listItemClickListener);
+        ListItemClickListener onItemClickListener = new ListItemClickListener();
+        ListItemLongClickListener onItemLongClickListener = new ListItemLongClickListener();
 
-        ListItemLongClickListener listItemLongClickListener = new ListItemLongClickListener();
-        listView.setOnItemLongClickListener(listItemLongClickListener);
+        listView.setOnItemClickListener(onItemClickListener);
+        listView.setOnItemLongClickListener(onItemLongClickListener);
+
+
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()  {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                JournalEntry clickedEntry = (JournalEntry) parent.getItemAtPosition(position);
+//                Log.d("onListClick", "listClick");
+//                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+//                intent.putExtra("clickedEntry", clickedEntry);
+//                startActivity(intent);
+//            }
+//        });
+//
+//
+//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                Log.d("onListLongCLick", "listCliiiick");
+//
+//                Cursor cursor = (Cursor) parent.getItemAtPosition(position);
+//                int _id = cursor.getInt(cursor.getColumnIndex(EntryDatabase.columnId));
+//
+//                EntryDatabase db = EntryDatabase.getInstance(getApplicationContext());
+//                db.delete(_id);
+//                updateData();
+//                return true;
+//            }
+//        });
     }
     @Override
     public void onResume() {

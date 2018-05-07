@@ -18,10 +18,15 @@ public class EntryAdapter extends android.widget.ResourceCursorAdapter {
 
     public EntryAdapter(Context context, Cursor c) {
         super(context, R.layout.entry_row, c);
+
     }
 
     @Override
     public void bindView(View view, Context context, Cursor c) {
+//        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        view = inflater.inflate(R.layout.entry_row, null);
+
+
 
         TextView textViewTitle = view.findViewById(R.id.titles);
 
